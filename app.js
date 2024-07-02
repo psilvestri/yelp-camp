@@ -66,15 +66,6 @@ app.post('/campgrounds', async (req, res) => {
 	res.redirect(`/campgrounds/${campground._id}`);
 });
 
-app.get('/makecampground', async (req, res) => {
-	const camp = new Campground({
-		title: 'My Backyard',
-		description: 'cheap camping!',
-	});
-	await camp.save();
-	res.send(camp);
-});
-
 app.listen(3000, () => {
 	console.log('LISTENING ON PORT 3000');
 });
