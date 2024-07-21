@@ -49,8 +49,6 @@ router.get(
 		const campground = await Campground.findById(req.params.id).populate(
 			'reviews'
 		);
-		console.log(campground);
-		console.log(req.params.id);
 		res.render('campgrounds/show', { campground });
 	})
 );
