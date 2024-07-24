@@ -1,4 +1,3 @@
-// Required core
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -9,13 +8,10 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 
-// Required models
 const User = require('./models/user');
 
-// Required utils
 const ExpressError = require('./utils/ExpressError');
 
-// Require routes
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
